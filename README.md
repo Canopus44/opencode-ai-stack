@@ -28,7 +28,7 @@ Herramientas que instala el script:
 ## Instalación
 
 ```bash
-git clone <URL-DE-ESTE-REPO> ai-stack
+git clone https://github.com/Canopus44/opencode-ai-stack.git ai-stack
 cd ai-stack
 ./scripts/setup.sh /ruta/a/tu/proyecto   # la ruta es opcional
 ```

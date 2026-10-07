@@ -7,7 +7,7 @@ Pega esto en tu agente (OpenCode u otro) en una máquina con Arch/CachyOS,
 
 Quiero el AI Stack del equipo. Haz esto paso a paso y reporta cada resultado:
 
-1. Clona el repo del stack a `~/Proyectos/ai-stack` (URL: `<URL-DE-ESTE-REPO>`).
+1. Clona el repo del stack a `~/Proyectos/ai-stack` (URL: `https://github.com/Canopus44/opencode-ai-stack.git`).
 2. Verifica requisitos: `yay` o `paru`, `npm`, `python3`, `opencode --version` (debe ser V2).
    Si falta algo, instálalo o dime exactamente qué instalar.
 3. Verifica login GitHub con `gh auth status`. Si no hay sesión, detente y pídeme
