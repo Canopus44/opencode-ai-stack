@@ -1,7 +1,7 @@
 ---
 description: Ejecuta pruebas, lints y depura fallos del código recién escrito. Úsalo después de implementar.
 mode: subagent
-model: opencode/muse-spark-1.3-contributor-free
+model: opencode-go/muse-spark-1.3-contributor
 steps: 25
 color: "#fbbf24"
 permissions:

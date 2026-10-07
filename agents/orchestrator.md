@@ -1,7 +1,7 @@
 ---
 description: Coordina el trabajo delegando en subagentes especializados. Úsalo como agente principal para tareas no triviales.
 mode: primary
-model: opencode/muse-spark-1.3-contributor-free
+model: opencode-go/muse-spark-1.3-contributor
 color: "#a78bfa"
 permissions:
   - action: edit

@@ -1,7 +1,7 @@
 ---
 description: "Tareas pequeñas y rápidas: documentación, limpieza, mensajes de commit, cambios menores. Úsalo para remates baratos."
 mode: subagent
-model: opencode/muse-spark-1.3-contributor-free
+model: opencode-go/muse-spark-1.3-contributor
 steps: 15
 color: "#94a3b8"
 permissions:

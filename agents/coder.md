@@ -1,7 +1,7 @@
 ---
 description: Implementa cambios de código siguiendo un slice o instrucción concreta. Úsalo para escribir y modificar archivos.
 mode: subagent
-model: opencode/muse-spark-1.3-contributor-free
+model: opencode-go/muse-spark-1.3-contributor
 steps: 40
 color: "#34d399"
 permissions:

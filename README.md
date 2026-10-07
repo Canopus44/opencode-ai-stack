@@ -7,7 +7,7 @@ económicos, memoria de código por grafo, skills de ahorro de tokens y MCP de G
 
 | Pieza | Qué es |
 |---|---|
-| `agents/` (8) | `orchestrator` (primary) + `planner`, `coder`, `tester`, `reviewer`, `explorer`, `researcher`, `helper` (subagents). Todos con `opencode/muse-spark-1.3-contributor-free` (tier gratuito) |
+| `agents/` (8) | `orchestrator` (primary) + `planner`, `coder`, `tester`, `reviewer`, `explorer`, `researcher`, `helper` (subagents). Todos con `opencode-go/muse-spark-1.3-contributor` (el más barato de Go: 0.10 in / 0.20 out por M tokens) |
 | `scripts/setup.sh` | Instalador completo del stack |
 | `scripts/github-mcp-server-wrapper.sh` | Auth de GitHub vía `gh`, sin secretos en disco |
 | `PROMPT.md` | Prompt listo para pegarle a la IA y que instale todo |
@@ -23,7 +23,8 @@ Herramientas que instala el script:
 
 1. Arch/CachyOS con `yay` o `paru`, `npm`, `python3`, OpenCode V2.
 2. `gh auth login` (el MCP de GitHub reusa ese login).
-3. Cuenta de OpenCode (el tier gratuito basta: todos los agentes usan modelos `-free`).
+3. Suscripción OpenCode Go (obligatoria: los modelos gratuitos `opencode/*-free`
+   devuelven 403 en sesiones hijas/subagentes y rompen la delegación).
 
 ## Instalación
 
@@ -46,7 +47,7 @@ Reinicia tus sesiones de OpenCode para cargar todo.
 
 ## Notas
 
-- Los modelos están en `agents/*.md` (campo `model:`). El repo usa el tier gratuito
-  (`muse-spark-1.3-contributor-free` en los 8); si tu equipo tiene Go, cámbialos ahí.
+- Los modelos están en `agents/*.md` (campo `model:`). El repo usa el más barato
+  de Go en los 8; no uses modelos `opencode/*-free` en subagentes (403 asegurado).
 - `codebase-memory-mcp install` también configura otros clientes detectados (Claude Code, Codex, VS Code) si existen: es benigno.
 - Nunca se commitean tokens: GitHub usa `gh auth token` en vivo.

@@ -1,7 +1,7 @@
 ---
 description: Revisa cambios por correctitud, regresiones y seguridad sin modificar nada. Úsalo tras implementar.
 mode: subagent
-model: opencode/muse-spark-1.3-contributor-free
+model: opencode-go/muse-spark-1.3-contributor
 steps: 10
 color: "#f472b6"
 permissions:

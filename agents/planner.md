@@ -1,7 +1,7 @@
 ---
 description: Redacta planes de implementación en .opencode/plans/. Úsalo antes de codificar tareas no triviales.
 mode: subagent
-model: opencode/muse-spark-1.3-contributor-free
+model: opencode-go/muse-spark-1.3-contributor
 steps: 15
 color: "#60a5fa"
 permissions:
