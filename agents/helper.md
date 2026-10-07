@@ -1,7 +1,7 @@
 ---
 description: "Tareas pequeñas y rápidas: documentación, limpieza, mensajes de commit, cambios menores. Úsalo para remates baratos."
 mode: subagent
-model: opencode/nemotron-3-ultra-free
+model: opencode/muse-spark-1.3-contributor-free
 steps: 15
 color: "#94a3b8"
 permissions:

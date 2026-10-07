@@ -1,7 +1,7 @@
 ---
 description: Ejecuta pruebas, lints y depura fallos del código recién escrito. Úsalo después de implementar.
 mode: subagent
-model: opencode-go/deepseek-v4.1-flash
+model: opencode/muse-spark-1.3-contributor-free
 steps: 25
 color: "#fbbf24"
 permissions:

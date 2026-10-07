@@ -1,7 +1,7 @@
 ---
 description: Investiga documentación externa, APIs y dependencias en la web. Solo lectura. Úsalo ante dudas de librerías o APIs.
 mode: subagent
-model: opencode/space-bunny-free
+model: opencode/muse-spark-1.3-contributor-free
 steps: 10
 color: "#c084fc"
 permissions:

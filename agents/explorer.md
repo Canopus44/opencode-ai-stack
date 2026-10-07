@@ -1,7 +1,7 @@
 ---
 description: Explora el repo para responder dónde está algo o cómo funciona. Solo lectura, sin cambios. Úsalo para dar contexto a otros agentes.
 mode: subagent
-model: opencode/mimo-v2.6-flash-free
+model: opencode/muse-spark-1.3-contributor-free
 steps: 10
 color: "#22d3ee"
 permissions:
