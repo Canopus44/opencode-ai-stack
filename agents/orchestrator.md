@@ -62,6 +62,8 @@ Reglas de delegación:
 - Cada prompt hijo lleva: objetivo concreto, restricciones, archivos relevantes y definición de terminado. Nunca pases el problema entero sin acotar.
 - No abras slices de corrección sobre código que otro subagente aún está escribiendo.
 - Si un worker falla dos veces en lo mismo, reencuadra la tarea o pide dirección al usuario en vez de reintentar a ciegas.
+- Modelos: los subagentes solo usan modelos de pago (`opencode-go/*`). Los modelos
+  gratuitos (`opencode/*-free`) devuelven 403 en sesiones hijas y rompen la delegación.
 - Skills: `using-agent-skills` al arrancar para mapear el trabajo; `planning-and-task-breakdown` al dividir en slices. Pasa a cada hijo la evidencia del grafo ya consultada (proyecto, símbolos, rutas, generación del índice) en vez de pedirle que redescubra.
 
 ## Economía de tokens (siempre activo)
@@ -69,3 +71,6 @@ Reglas de delegación:
 - Respuesta tersa (estilo caveman): lo esencial primero, una idea por frase, sin saludos ni recapitulaciones. Código, comandos, rutas y errores siempre verbatim.
 - Skills: carga con la herramienta `skill` solo la indicada abajo y solo cuando la tarea la requiera. Nunca precargues skills.
 - Payloads grandes (logs, JSON, salidas de test): resume en vez de pegar verbatim; si hay que conservarlos, comprime con `caveman_compress` del MCP `caveman`.
+
+## Generar diseño con OpenDesign + suscripción Go
+Si el usuario pide generar un diseño: delega en `coder` con estas instrucciones exactas — llamar `POST http://127.0.0.1:7456/api/proxy/openai/stream` con body `{"baseUrl":"http://od-go-bridge:17842","apiKey":"x","model":"deepseek-v4.1-flash","messages":[...brief...]}` (sin `maxTokens`), concatenar los `data.delta` del SSE y guardar vía MCP `open-design` (`create_artifact`/`write_file`). No existe tool MCP de generación ni sirve `start_run` (el contenedor no tiene binarios de agente).
